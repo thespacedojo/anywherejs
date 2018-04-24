@@ -54,7 +54,8 @@
 }
 
 .signup input {
-  margin-right: 1rem
+  margin-right: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .signup input:placeholder {
@@ -66,4 +67,5 @@
   border-radius: 15px;
   padding: 7px 25px;
   font-family: 'Merriweather';
+  border-color: #7156a7;
 }

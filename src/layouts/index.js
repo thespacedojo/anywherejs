@@ -33,6 +33,16 @@ const Layout = ({ children, data }) => (
         
       </div>
       {children()}
+      <div className="signup">
+        <form>
+          <fieldset style={{ padding: '25px 25px 35px 25px', borderRadius: '5px', textAlign: 'center'}}>
+            <legend style={{ padding: '0 15px', textAlign: 'center' }}>Tell me when and how to join</legend>
+            <input type="text" name="name" placeholder="Jill Smith"/>
+            <input type="email" name="email" placeholder="Jill@javascript.com" />
+            <input type="submit" value="Join for free" />
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
 )

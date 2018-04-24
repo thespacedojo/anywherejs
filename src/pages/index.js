@@ -16,16 +16,6 @@ const IndexPage = ({data}) => {
         <img src={event.speaker.avatar.url} />
         <h3>{event.speaker.name}</h3>
       </div>
-      <div className="signup">
-        <form>
-          <fieldset style={{ padding: '25px 25px 35px 25px', borderRadius: '5px'}}>
-            <legend style={{ padding: '0 15px', textAlign: 'center' }}>Tell me when and how to join</legend>
-            <input type="text" name="name" placeholder="John Smith"/>
-            <input type="email" name="email" placeholder="John@javascript.com" />
-            <input type="submit" value="Join for free" />
-          </fieldset>
-        </form>
-      </div>
     </div>
   )
 }
