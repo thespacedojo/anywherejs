@@ -6,6 +6,6 @@
 
 @media (max-width: 850px) {
   #main {
-    height: 150vh;
+    height: 100%;
   }
 }
