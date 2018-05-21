@@ -1,7 +1,5 @@
 .signup {
   margin-top: 25px;
-  grid-row-start: 2;
-  grid-column: 1 / span 3;
   display: flex;
   justify-content: center;
 }
@@ -12,12 +10,12 @@
 }
 
 .signup form {
-  display: inline-block;
 }
 
 .signup fieldset {
   display: grid;
-  padding: 25px 25px 35px 25px; 
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 25px 25px 35px 25px;
   border-radius: 5px;
   text-align: center;
 }
@@ -58,6 +56,14 @@
     grid-column: 1fr;
     display: flex;
     justify-content: center;
+  }
+
+  .signup input {
+    margin-right: 0;
+  }
+
+  .signup fieldset {
+    grid-template-columns: 1fr;
   }
 
   #drip-full-name-label {

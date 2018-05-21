@@ -36,6 +36,10 @@
   padding: 0px;
 }
 
+@media (max-width: 400px) {
+  h2 {font-size: 1em;}
+  h3 {font-size: 0.9em;}
+}
 @media (max-width: 600px) {
   .talk {
     display: grid;
