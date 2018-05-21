@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import Header from '../components/Header'
+import Signup from '../components/Signup'
+import Tagline from '../components/Tagline'
 import background from './remote-background.jpeg';
-import './index.css'
+import './index.css';
+import './background.css';
 
 const Layout = ({ children, data }) => (
-  <div style={{
-      backgroundImage: `url(${background})`,
-      height: '100vh',
-      backgroundSize: 'cover',
-      backgroundPosition: '50% 20%'
+  <div id="main" style={{
+      backgroundImage: `url(${background})`
     }}>
     <Helmet
       title={data.site.siteMetadata.name}
@@ -28,21 +28,9 @@ const Layout = ({ children, data }) => (
         paddingTop: 0,
       }}
     >
-      <h2 style={{ margin: '2rem 0 2rem 0', fontWeight: '400'}} >{data.site.siteMetadata.tagline} <span style={{fontSize: '0.7em', color: '#A685BF'}}>(what?)</span></h2>
-      <div className="nextUp">
-        
-      </div>
+      <Tagline tagline={data.site.siteMetadata.tagline} />
       {children()}
-      <div className="signup">
-        <form>
-          <fieldset style={{ padding: '25px 25px 35px 25px', borderRadius: '5px', textAlign: 'center'}}>
-            <legend style={{ padding: '0 15px', textAlign: 'center' }}>Tell me when and how to join</legend>
-            <input type="text" name="name" placeholder="Jill Smith"/>
-            <input type="email" name="email" placeholder="Jill@javascript.com" />
-            <input type="submit" value="Join for free" />
-          </fieldset>
-        </form>
-      </div>
+      <Signup />
     </div>
   </div>
 )

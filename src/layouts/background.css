@@ -1,0 +1,11 @@
+#main {
+  height: 105vh;
+  background-size: cover;
+  background-position: 50% 20%;
+}
+
+@media (max-width: 850px) {
+  #main {
+    height: 150vh;
+  }
+}

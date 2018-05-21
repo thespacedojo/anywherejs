@@ -32,6 +32,7 @@ module.exports = {
                 name
                 avatar {
                   url
+                  handle
                 }
               }
             }

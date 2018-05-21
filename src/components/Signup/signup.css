@@ -1,0 +1,78 @@
+.signup {
+  margin-top: 25px;
+  grid-row-start: 2;
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+}
+
+.signup h4 {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.signup form {
+  display: inline-block;
+}
+
+.signup fieldset {
+  display: grid;
+  padding: 25px 25px 35px 25px; 
+  border-radius: 5px;
+  text-align: center;
+}
+
+.signup label {
+  grid-row-start: 1;
+}
+
+.signup input {
+  margin-right: 1rem;
+  margin-bottom: 0.4rem;
+  grid-row-start: 2;
+}
+
+.signup input:placeholder {
+  color: #ddd;
+}
+
+.signup input[type="submit"] {
+  background-color: rgb(166, 133, 191);
+  border-radius: 15px;
+  padding: 7px 25px;
+  font-family: 'Merriweather';
+  border-color: #7156a7;
+  grid-row-start: 2;
+}
+
+.signedUp {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+@media (max-width: 850px) {
+  .signup {
+    margin-top: 25px;
+    grid-row-start: 2;
+    grid-column: 1fr;
+    display: flex;
+    justify-content: center;
+  }
+
+  #drip-full-name-label {
+    grid-row-start: 1;
+  }
+  #drip-full-name {
+    grid-row-start: 2;
+  }
+  #drip-email-label {
+    grid-row-start: 3;
+  }
+  #drip-email {
+    grid-row-start: 4;
+  }
+  .signup input[type="submit"] {
+    grid-row-start: 5;
+  }
+}

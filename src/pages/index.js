@@ -1,22 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Talk from '../components/Talk'
 import './index.css'
 
 const IndexPage = ({data}) => {
   const event = data.allEvents.edges[0].node
   const date = new Date(event.eventStart);
   return (
-    <div className="talk">
-      <div className="talkInfo">
-        <h2>{event.title}</h2>
-        <h4 style={{color: 'rgb(166, 133, 191)'}}>{date.toLocaleDateString()} at {date.toLocaleTimeString()}</h4>
-        <p>{event.description}</p>
-      </div>
-      <div className="speakerInfo">
-        <img src={event.speaker.avatar.url} />
-        <h3>{event.speaker.name}</h3>
-      </div>
-    </div>
+    <Talk event={event} date={date} />
   )
 }
 
@@ -42,6 +33,7 @@ export const query = graphql`
             name
             avatar {
               url
+              handle
             }
           }
         }
