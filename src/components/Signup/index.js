@@ -69,14 +69,12 @@ class Signup extends React.Component {
         return (
           <div className="signup">
             <form onSubmit={ this.saveEmail } action="https://www.getdrip.com/forms/866148695/submissions" method="post" data-drip-embedded-form="866148695">
-              <fieldset>
-                <legend style={{ padding: '0 15px', textAlign: 'center' }}>Tell me when and how to join</legend>
-                <label id="drip-full-name-label" htmlFor="drip-full-name" >Name</label>
-                <input type="text" id="drip-full-name" placeholder="Jill Smith"name="fields[full_name]" ref={(el) => this.fullName = el}/>
-                <label id="drip-email-label" htmlFor="drip-email" >Email Address</label>
-                <input type="email" id="drip-email" placeholder="Jill@javascript.com" name="fields[email]" ref={(el) => this.email = el}/>
-                <input type="submit" value="Join for free" />
-              </fieldset>
+              <h4>Tell me when and how to join</h4>
+              <label id="drip-full-name-label" htmlFor="drip-full-name" >Name</label>
+              <input type="text" id="drip-full-name" placeholder="Jill Smith"name="fields[full_name]" ref={(el) => this.fullName = el}/>
+              <label id="drip-email-label" htmlFor="drip-email" >Email Address</label>
+              <input type="email" id="drip-email" placeholder="Jill@javascript.com" name="fields[email]" ref={(el) => this.email = el}/>
+              <input type="submit" value="Join for free" />
             </form>
           </div>
         )

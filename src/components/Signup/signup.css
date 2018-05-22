@@ -1,33 +1,38 @@
 .signup {
-  margin-top: 25px;
+  margin: 25px auto;
   display: flex;
   justify-content: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 90%;
+  padding: 20px;
 }
 
 .signup h4 {
-  display: inline-block;
-  margin-right: 1rem;
+  grid-column-start: 2;
+  grid-row-start: 1
 }
 
 .signup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .signup fieldset {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 25px 25px 35px 25px;
   border-radius: 5px;
   text-align: center;
 }
 
 .signup label {
-  grid-row-start: 1;
+  grid-row-start: 2;
+  text-align: center;
 }
 
 .signup input {
   margin-right: 1rem;
   margin-bottom: 0.4rem;
-  grid-row-start: 2;
+  grid-row-start: 3;
 }
 
 .signup input:placeholder {
@@ -39,15 +44,14 @@
   border-radius: 15px;
   padding: 7px 25px;
   font-family: 'Merriweather';
-  border-color: #7156a7;
-  grid-row-start: 2;
+  grid-row-start: 3;
+  border: 0;
 }
 
 .signedUp {
-  border: 1px solid white;
-  border-radius: 5px;
   padding: 30px;
 }
+
 
 @media (max-width: 850px) {
   .signup {
@@ -56,29 +60,44 @@
     grid-column: 1fr;
     display: flex;
     justify-content: center;
+    width: 20rem;
   }
 
   .signup input {
     margin-right: 0;
   }
 
-  .signup fieldset {
+  .signup form {
     grid-template-columns: 1fr;
   }
 
-  #drip-full-name-label {
-    grid-row-start: 1;
+  .signup h4 {
+    grid-column-start: 1;
   }
-  #drip-full-name {
+
+  #drip-full-name-label {
     grid-row-start: 2;
   }
-  #drip-email-label {
+  #drip-full-name {
     grid-row-start: 3;
   }
-  #drip-email {
+  #drip-email-label {
     grid-row-start: 4;
   }
-  .signup input[type="submit"] {
+  #drip-email {
     grid-row-start: 5;
+  }
+  .signup input[type="submit"] {
+    grid-row-start: 6;
+  }
+}
+
+@media (max-width: 530px) {
+  .signup {
+    width: 15rem;
+  }
+
+  .signup h4 {
+    font-size: 0.8em;
   }
 }
