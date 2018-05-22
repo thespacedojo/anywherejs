@@ -61,7 +61,6 @@
     grid-column: 1fr;
     display: flex;
     justify-content: center;
-    width: 20rem;
   }
 
   .signup input {
@@ -95,7 +94,6 @@
 
 @media (max-width: 530px) {
   .signup {
-    width: 15rem;
   }
 
   .signup h4 {
