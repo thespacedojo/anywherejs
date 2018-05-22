@@ -11,6 +11,7 @@
 .signup h4 {
   grid-column-start: 2;
   grid-row-start: 1
+  text-align: center;
 }
 
 .signup form {
@@ -93,9 +94,6 @@
 }
 
 @media (max-width: 530px) {
-  .signup {
-  }
-
   .signup h4 {
     font-size: 0.8em;
   }
