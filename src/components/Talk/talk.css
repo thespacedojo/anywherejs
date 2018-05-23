@@ -61,4 +61,8 @@
   .talkInfo p {
     display: none;
   }
+
+	.speakerInfo {
+		margin: 10px;
+	}
 }
