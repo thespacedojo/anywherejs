@@ -44,6 +44,21 @@ class Signup extends React.Component {
         this.setState({ 'dripPayload': payload });
 			}
 		}]);
+		window._dcq.push(
+			["subscribe",
+				{
+					campaign_id: "227912236",
+					fields: {
+						full_name: this.fullName.value,
+						email: this.email.value
+					},
+					success: (payload) => {
+						console.log(payload, 'subscribed');
+					}
+				}
+			]
+		);
+
 
   }
 

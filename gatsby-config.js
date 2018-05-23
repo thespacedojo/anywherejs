@@ -6,6 +6,16 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
+		{
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-11472568-23",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: [],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
