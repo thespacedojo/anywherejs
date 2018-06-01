@@ -22,13 +22,13 @@ const Layout = ({ children, data }) => (
         { name: 'twitter:site', content:"anywherejs" },
         { name: 'twitter:title', content: 'Feeling crunched for learning time?' },
         { name: 'twitter:description', content:'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.' },
-        { name: 'twitter:image:src', content: 'http://conf.crater.io/images/crater-remote-conf.jpeg' },
+        { name: 'twitter:image:src', content: 'http://anywherejs.com/${background}' },
         { property: 'og:title', content: 'Feeling crunched for learning time?' },
         { property: 'og:site_name', content: 'AnywhereJS - The remote meetup for the world' },
         { property: 'og:url', content: 'http://anywherejs.com/' },
         { property: 'og:description', content: 'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:image', content: 'http://conf.crater.io/images/crater-remote-conf.jpeg' },
+        { property: 'og:image', content: 'http://anywherejs.com/${background}' },
         { property: 'og:image:height', content: '1890' },
         { property: 'og:image:width', content: '3000' }
       ]}
