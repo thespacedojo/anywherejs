@@ -7,7 +7,7 @@ const Talk = ({event, date}) => {
     <div className="talk">
       <div className="talkInfo">
         <h2>{event.title}</h2>
-        <h4 style={{color: 'rgb(166, 133, 191)'}}>{date.toLocaleDateString()} at {date.toLocaleTimeString()}</h4>
+        <h4 style={{color: 'rgb(166, 133, 191)'}}>{date.toLocaleDateString()} at {date.toLocaleTimeString()} (local time)</h4>
         <p>{event.description}</p>
       </div>
       <div className="speakerInfo">
