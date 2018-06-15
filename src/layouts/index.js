@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import Signup from '../components/Signup'
 import Tagline from '../components/Tagline'
 import background from './remote-background.jpeg';
 import './index.css';
@@ -43,7 +42,6 @@ const Layout = ({ children, data }) => (
     >
       <Tagline tagline={data.site.siteMetadata.tagline} />
       {children()}
-      <Signup />
     </div>
   </div>
 )

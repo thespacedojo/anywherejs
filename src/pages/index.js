@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Talk from '../components/Talk'
+import Signup from '../components/Signup'
 import './index.css'
 
 const IndexPage = ({data}) => {
   const event = data.allEvents.edges[0].node
   const date = new Date(event.eventStart);
   return (
-    <Talk event={event} date={date} />
+    <div>
+      <Talk event={event} date={date} />
+      <Signup />
+    </div>
   )
 }
 
