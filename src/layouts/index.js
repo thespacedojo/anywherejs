@@ -4,32 +4,63 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Tagline from '../components/Tagline'
-import background from './remote-background.jpeg';
-import './index.css';
-import './background.css';
+import background from './remote-background.jpeg'
+import './index.css'
+import './background.css'
 
 const Layout = ({ children, data }) => (
-  <div id="main" style={{
-      backgroundImage: `url(${background})`
-    }}>
+  <div
+    id="main"
+    style={{
+      backgroundImage: `url(${background})`,
+    }}
+  >
     <Helmet
       title={data.site.siteMetadata.name}
       meta={[
-        { name: 'description', content:'Javascript is one of the fastest growing languages in the world, and is the most popular langauge on Github. Get up to speed or sharpen your existing javascript knowledge with these free talks.'},
-        { name: 'keywords', content: 'javascript, es2016, node.js, angular.js, react.js, vue.js, feathers.js' },
+        {
+          name: 'description',
+          content:
+            'Javascript is one of the fastest growing languages in the world, and is the most popular langauge on Github. Get up to speed or sharpen your existing javascript knowledge with these free talks.',
+        },
+        {
+          name: 'keywords',
+          content:
+            'javascript, es2016, node.js, angular.js, react.js, vue.js, feathers.js',
+        },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content:"anywherejs" },
-        { name: 'twitter:title', content: 'Feeling crunched for javascript learning time?' },
-        { name: 'twitter:description', content:'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.' },
-        { name: 'twitter:image:src', content: `http://anywherejs.com${background}` },
-        { property: 'og:title', content: 'Feeling crunched for javascript learning time?' },
-        { property: 'og:site_name', content: 'AnywhereJS - The remote meetup for the world' },
+        { name: 'twitter:site', content: 'anywherejs' },
+        {
+          name: 'twitter:title',
+          content: 'Feeling crunched for javascript learning time?',
+        },
+        {
+          name: 'twitter:description',
+          content:
+            'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.',
+        },
+        {
+          name: 'twitter:image:src',
+          content: `http://anywherejs.com${background}`,
+        },
+        {
+          property: 'og:title',
+          content: 'Feeling crunched for javascript learning time?',
+        },
+        {
+          property: 'og:site_name',
+          content: 'AnywhereJS - The remote meetup for the world',
+        },
         { property: 'og:url', content: 'http://anywherejs.com/' },
-        { property: 'og:description', content: 'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.' },
+        {
+          property: 'og:description',
+          content:
+            'Sign up, plug in, and level up with this meetup! Get the very best talks, all without the travel.',
+        },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: `http://anywherejs.com${background}` },
         { property: 'og:image:height', content: '1890' },
-        { property: 'og:image:width', content: '3000' }
+        { property: 'og:image:width', content: '3000' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.name} />
@@ -53,7 +84,7 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query siteData{
+  query siteData {
     site {
       siteMetadata {
         name

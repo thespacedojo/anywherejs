@@ -4,9 +4,9 @@ import Talk from '../components/Talk'
 import Signup from '../components/Signup'
 import './index.css'
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const event = data.allEvents.edges[0].node
-  const date = new Date(event.eventStart);
+  const date = new Date(event.eventStart)
   return (
     <div>
       <Talk event={event} date={date} />
@@ -19,12 +19,7 @@ export default IndexPage
 
 export const query = graphql`
   query UpcomingEvent {
-    allEvents(
-      limit: 1
-      filter: {
-       nextEvent: { eq: true }
-      }
-    ) {
+    allEvents(limit: 1, filter: { nextEvent: { eq: true } }) {
       edges {
         node {
           id
