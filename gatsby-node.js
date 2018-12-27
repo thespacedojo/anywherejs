@@ -1,7 +1,32 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path')
 
- // You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allEvents {
+          edges {
+            node {
+              titleslug
+            }
+          }
+        }
+      }
+    `).then(result => {
+      console.log('NODE', result.data.allEvents.edges)
+      result.data.allEvents.edges.forEach(({ node }) => {
+        createPage({
+          path: node.titleslug,
+          component: path.resolve(`./src/templates/past-talk.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            titleslug: node.titleslug,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+}

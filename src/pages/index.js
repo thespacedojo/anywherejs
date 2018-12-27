@@ -1,17 +1,18 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import Talk from '../components/Talk'
 import Signup from '../components/Signup'
+import Layout from '../components/Layout'
 import './index.css'
 
 const IndexPage = ({ data }) => {
-  const event = data.allEvents.edges[0].node
+  const event = data.allEvents ? data.allEvents.edges[0].node : data.events
   const date = new Date(event.eventStart)
   return (
-    <div>
+    <Layout>
       <Talk event={event} date={date} />
       <Signup />
-    </div>
+    </Layout>
   )
 }
 
