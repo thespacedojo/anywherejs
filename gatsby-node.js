@@ -14,7 +14,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      console.log('NODE', result.data.allEvents.edges)
       result.data.allEvents.edges.forEach(({ node }) => {
         createPage({
           path: node.titleslug,

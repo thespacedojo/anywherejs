@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import YouTube from 'react-youtube-embed'
 import './talk.css'
 
 const Talk = ({ event, date }) => {
@@ -11,6 +12,7 @@ const Talk = ({ event, date }) => {
           {date.toLocaleDateString()} at {date.toLocaleTimeString()} (local
           time)
         </h4>
+        {event.youtubeId ? <YouTube id={event.youtubeId} /> : null}
         <p>{event.description}</p>
       </div>
       <div className="speakerInfo">

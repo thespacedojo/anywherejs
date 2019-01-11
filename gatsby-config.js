@@ -36,6 +36,7 @@ module.exports = {
               eventStart
               description
               nextEvent
+              youtubeId
               speaker {
                 name
                 avatar {
