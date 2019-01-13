@@ -13,6 +13,7 @@ export const query = graphql`
       description
       eventStart
       nextEvent
+      youtubeId
       speaker {
         name
         avatar {

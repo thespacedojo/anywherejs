@@ -9,7 +9,7 @@
   padding: 25px;
 }
 
-.speakerInfo{
+.speakerInfo {
   grid-column-start: 1;
   grid-row-start: 1;
   align-self: center;
@@ -32,13 +32,17 @@
 }
 
 .talkInfo p {
-  margin: 0px;
+  margin: 10px 0 0;
   padding: 0px;
 }
 
 @media (max-width: 400px) {
-  h2 {font-size: 1em;}
-  h3 {font-size: 0.9em;}
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 0.9em;
+  }
 }
 @media (max-width: 600px) {
   .talk {
@@ -62,7 +66,7 @@
     display: none;
   }
 
-	.speakerInfo {
-		margin: 10px;
-	}
+  .speakerInfo {
+    margin: 10px;
+  }
 }
